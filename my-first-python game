@@ -1,0 +1,82 @@
+import random
+import pyttsx3
+import webbrowser
+
+engine = pyttsx3.init()
+engine.say("Welcome to our game hub")
+engine.runAndWait()
+print("What you want to play \nfor rock,paper,sceasor type:-game1 \nfor gussing number type:- game2 ")
+game_choise=input("Enter here: ")
+
+
+# rock, paper and sceasor game 
+
+if game_choise==("game1"):
+    
+
+    def func ():
+
+        print("Welcome to the rock and paper and sceasor game")
+        engine.say("Welcome to the rock and paper and sceasor game")
+        
+        print("chose one of the following " \
+        "(ROCK)" \
+        "(PAPER)" \
+        "(SCEASOR)")
+
+        chosee = ("rock", "paper","sceasor","start again")
+        points = 0
+
+        while True:
+            user=input("Enter your here!! ")
+            computer=random.choice(chosee)
+
+            if user == computer:
+                print("its draw! ")
+            elif user == "exit":
+                break
+            # elif user not in chosee:
+            #     print("invalid choices")
+            #     pass
+
+    # starting logic from heere
+            elif user == "restart":
+                print("match starting again.... ")
+
+            elif points >=2:
+                engine.say("you win ")
+                webbrowser.open("https://www.youtube.com/shorts/sxmTTS4qros")           
+            elif (user == "rock" and computer == "sceasor") or \
+                (user == "paper" and computer == "rock") or \
+                (user == "sceasor" and computer == "paper"):
+                points +=1
+                print(f"points is this\n\t{points}")
+                print(f"You win! \nand computer chose {computer}")
+            else:
+                print("you lose  Try again")
+    func()
+
+elif game_choise =="game2":
+    engine.say("Welcome to the number gussing  game")
+    print("Welcome to the number gussing  game")
+
+    while True:
+        
+        if game_choise=="game2":
+            print("oprning game 2")
+        else:
+            print("invalid")
+
+        # for i in range (1,10):
+        #     print(i)
+
+        game_2= int(input("Enter your number"))
+        computer_2= random.randint(1,11)
+
+        if game_2 == computer_2:
+            print("whah yarr 'YOU WIN'")
+        else:
+            print("seeth yaar haar gaye ")
+
+else:
+    print("Invalid game name")
