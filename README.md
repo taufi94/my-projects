@@ -1,4 +1,4 @@
-## 👋 Hi! I'm [Your Name/Nickname]
+## 👋 Hi! I'm taufique
 
 🎒 Class 9th Student | 🐍 Learning Python  
 💡 Future AI/ML Engineer in the making  
