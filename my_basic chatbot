@@ -1,0 +1,53 @@
+def dost_bot(user): 
+    user = user.lower()
+    
+    if user == "hi" or user == "hii" or user == "hello" or user == "helo" or user == "hey" or user == "heyy" or user == "namaste" or user == "yo" or user == "wassup" or user == "good morning" or user == "good evening":
+        return "Hello dost! Kya haal chaal? \nAgar Maths me dikkat hai toh 'P' likh de."
+
+    elif "promt" in user:
+        print("📜 DostGPT Commands:")
+        print("- hi / hello / namaste / hey")
+        print("- kaise ho / how are you / kya haal")
+        print("- p          ....  Maths help")
+        print("- joke / bored ....  Joke sunne ke liye")
+        print("- name       ....  Bot ka naam poochhne ke liye")
+        print("- bye / chal / goodbye ....  Chat khatam karne ke liye")
+        print("- promt      ....  Yeh list dobara dekhne ke liye")
+        return "Ab command type karo "
+
+    elif "how are you" in user or "kaise ho" in user or "kya haal" in user:
+        return "Mast hoon yaar! Tu suna, sab first class? "
+
+    elif user == "p":
+        return "Toh tu Maths me atak gaya \nBata kya question hai? Jaise '2x + 3 = 7'?"
+
+    elif "thanks" in user or "shukriya" in user or "thank you" in user:
+        return "Arey koi baat nahi bhai! Apun tere liye hamesha yahan hai "
+
+    elif "kya kar rahe ho" in user or "what are you doing" in user:
+        return "Tere se baat kar raha hoon, aur kya "
+
+    elif "bore" in user or "bored" in user or "joke" in user:
+        return "Chal ek joke sun: Teacher: Homework kyu nahi kiya?\nStudent: Kyuki ma'am, homework emotional damage deta hai 😂"
+
+    elif "bye" in user or "goodbye" in user or "chal" in user:
+        return "Achha chal, fir milte hain. Khayal rakhna dost! "
+
+    elif "name" in user:
+        return "Mera naam DostGPT hai — tera apna digital yaar "
+
+    else:
+        return "Yeh toh mere dimaag ke bahar hai  Kuch aur pooch!"
+
+# Chat loop
+print("🤖 DostGPT ready hai! Baatein karte hain... (exit likh ke nikal jao)\n")
+print("Type 'promt' to see all commands.\n")
+
+while True:
+    user = input("You: ")
+    if user.lower() == "exit" or user == "byy":
+        print("Bot: Bye bye, apna khayal rakhna! ")
+        break
+
+    response = dost_bot(user)
+    print("Bot:", response)
