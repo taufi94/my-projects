@@ -1,3 +1,7 @@
+import pyjokes
+
+
+
 def dost_bot(user): 
     user = user.lower()
     
@@ -28,7 +32,8 @@ def dost_bot(user):
         return "Tere se baat kar raha hoon, aur kya "
 
     elif "bore" in user or "bored" in user or "joke" in user:
-        return "Chal ek joke sun: Teacher: Homework kyu nahi kiya?\nStudent: Kyuki ma'am, homework emotional damage deta hai 😂"
+        joke = pyjokes.get_joke()
+        return f"Chal ek joke sun 😂\n{joke}"
 
     elif "bye" in user or "goodbye" in user or "chal" in user:
         return "Achha chal, fir milte hain. Khayal rakhna dost! "
